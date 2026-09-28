@@ -1,0 +1,3054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Health Dublin | Private Medical Clinic & GP Consultations</title>
+  <meta name="description" content="Unhurried private GP consultations, executive health screens, and advanced diagnostics at Fitzwilliam Place, Dublin 2. Registered Irish Medical Council physicians." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --foreground: #121c24;
+      --navy: #0a1b2a;
+      --navy-light: #162c3f;
+      --emerald: #0b5341;
+      --emerald-hover: #083f31;
+      --emerald-soft: #ebf5f0;
+      --sage: #407b6b;
+      --gold: #c89d38;
+      --stone-50: #fbfbfa;
+      --stone-100: #f4f3ef;
+      --stone-200: #e8e6df;
+      --stone-300: #d4d0c7;
+      --stone-400: #a39e93;
+      --stone-500: #736e64;
+      --stone-600: #575249;
+      --stone-700: #3c3832;
+      --stone-800: #26231f;
+      --stone-900: #171513;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--foreground);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .container {
+        padding: 0 2rem;
+      }
+    }
+
+    /* Pulse animation */
+    @keyframes pulseGlow {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.4);
+        opacity: 0.4;
+      }
+    }
+
+    .pulse {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #34d399;
+      animation: pulseGlow 2.4s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+
+    /* Header & Triage Bar */
+    .top-bar {
+      background-color: var(--navy);
+      color: #cbd5e1;
+      font-size: 0.75rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .top-bar-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .top-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .top-left strong {
+      color: #fff;
+    }
+
+    .top-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .emergency-text {
+      color: #fde047;
+      font-weight: 600;
+    }
+
+    /* Main Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--stone-200);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-inner {
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--emerald);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(11, 83, 65, 0.25);
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-pill {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      background: #ecfdf5;
+      color: #065f46;
+      border-radius: 4px;
+      border: 1px solid #a7f3d0;
+    }
+
+    .brand-sub {
+      font-size: 0.7rem;
+      color: var(--stone-500);
+      letter-spacing: 0.02em;
+    }
+
+    nav.desktop-nav {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--stone-700);
+    }
+
+    @media (min-width: 1024px) {
+      nav.desktop-nav {
+        display: flex;
+      }
+    }
+
+    nav.desktop-nav a {
+      transition: color 0.2s;
+    }
+
+    nav.desktop-nav a:hover {
+      color: var(--emerald);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .phone-btn {
+      display: none;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .phone-btn {
+        display: flex;
+      }
+    }
+
+    .phone-icon-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--emerald-soft);
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: var(--emerald);
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 14px rgba(11, 83, 65, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--emerald-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(11, 83, 65, 0.35);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--stone-800);
+      border: 1px solid var(--stone-300);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.7rem 1.4rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--stone-50);
+      border-color: var(--stone-400);
+    }
+
+    .mobile-menu-btn {
+      display: flex;
+      padding: 0.5rem;
+      background: none;
+      color: var(--stone-700);
+      border-radius: 8px;
+    }
+
+    @media (min-width: 1024px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-drawer {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      background: white;
+      padding: 1.5rem;
+      border-top: 1px solid var(--stone-200);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .mobile-drawer.active {
+      display: flex;
+    }
+
+    .mobile-drawer a {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--stone-800);
+      padding: 0.5rem 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 3rem 0 4.5rem;
+      background: radial-gradient(circle at 10% 20%, rgba(235, 245, 240, 0.7) 0%, rgba(250, 249, 246, 1) 90%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3.5rem;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: white;
+      border: 1px solid #a7f3d0;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--navy);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      line-height: 1.12;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-title {
+        font-size: 3.25rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 3.75rem;
+      }
+    }
+
+    .hero-title .serif-italic {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--emerald);
+      font-weight: 600;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--stone-600);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      max-width: 600px;
+    }
+
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature-check {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--stone-700);
+    }
+
+    .feature-check svg {
+      color: var(--emerald);
+      flex-shrink: 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-actions {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .hero-actions .btn-primary {
+      padding: 0.9rem 1.8rem;
+      font-size: 0.95rem;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--stone-200);
+      font-size: 0.75rem;
+      color: var(--stone-600);
+    }
+
+    .stars {
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    /* Hero Image Showcase */
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      border-radius: 1.75rem;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(10, 27, 42, 0.22);
+      border: 5px solid white;
+      aspect-ratio: 4/3;
+      background: #e2e8f0;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-image-frame {
+        aspect-ratio: 4/5;
+      }
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(10,27,42,0.7) 100%);
+      pointer-events: none;
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      padding: 1rem 1.25rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .floating-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--emerald);
+      letter-spacing: 0.05em;
+    }
+
+    .floating-heading {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .floating-price {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--emerald);
+    }
+
+    /* Trust Accreditation Bar */
+    .trust-bar {
+      background: white;
+      border-top: 1px solid var(--stone-200);
+      border-bottom: 1px solid var(--stone-200);
+      padding: 1.5rem 0;
+    }
+
+    .trust-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem 3rem;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--stone-600);
+    }
+
+    .trust-item svg {
+      color: var(--emerald);
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Quick Booking Bar */
+    .quick-bar-wrapper {
+      margin-top: -2rem;
+      position: relative;
+      z-index: 20;
+    }
+
+    .quick-bar {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.25rem 1.75rem;
+      box-shadow: 0 15px 35px -5px rgba(10, 27, 42, 0.08);
+      border: 1px solid var(--stone-200);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .quick-bar {
+        grid-template-columns: 1.5fr 1fr 1fr auto;
+      }
+    }
+
+    .input-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .input-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--stone-500);
+    }
+
+    .input-select {
+      width: 100%;
+      border: 1px solid var(--stone-200);
+      background: #fff;
+      padding: 0.6rem 0.85rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--stone-800);
+      outline: none;
+    }
+
+    .input-select:focus {
+      border-color: var(--emerald);
+      box-shadow: 0 0 0 2px rgba(11, 83, 65, 0.15);
+    }
+
+    /* Section Global Headers */
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      border: 1px solid #a7f3d0;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+    }
+
+    @media (min-width: 640px) {
+      .section-title {
+        font-size: 2.75rem;
+      }
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--stone-600);
+      line-height: 1.6;
+    }
+
+    /* Services Grid */
+    .services-section {
+      padding: 5rem 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      border: 1px solid var(--stone-200);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(10, 27, 42, 0.08);
+      border-color: #a7f3d0;
+    }
+
+    .service-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .service-category {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      background: var(--stone-100);
+      color: var(--stone-700);
+    }
+
+    .service-duration {
+      font-size: 0.75rem;
+      color: var(--stone-400);
+      font-weight: 500;
+    }
+
+    .service-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-desc {
+      font-size: 0.85rem;
+      color: var(--stone-600);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-price-box {
+      margin-bottom: 1.25rem;
+    }
+
+    .service-price {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .service-per {
+      font-size: 0.75rem;
+      color: var(--stone-500);
+    }
+
+    .benefits-list {
+      list-style: none;
+      border-top: 1px solid var(--stone-100);
+      padding-top: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .benefits-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--stone-700);
+    }
+
+    .benefits-list li svg {
+      color: var(--emerald);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .service-card .btn-primary {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.8rem;
+      padding: 0.65rem 1rem;
+    }
+
+    /* Facility & Architectural Highlights (Dark luxury section) */
+    .facility-section {
+      background: var(--navy);
+      color: white;
+      padding: 5.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .facility-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .facility-image-card {
+      position: relative;
+      border-radius: 1.75rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      aspect-ratio: 16/11;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .facility-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .facility-img-caption {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      background: rgba(10, 27, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.75rem;
+    }
+
+    .facility-img-caption span {
+      color: #34d399;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .facility-pillars {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .facility-pillars {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .pillar-card {
+      padding: 1.25rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: border-color 0.2s;
+    }
+
+    .pillar-card:hover {
+      border-color: #34d399;
+    }
+
+    .pillar-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(11, 83, 65, 0.6);
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.35rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+
+    /* Doctors Section */
+    .doctors-section {
+      padding: 5.5rem 0;
+      background: white;
+    }
+
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .doctors-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .doctor-card {
+      background: var(--bg);
+      border-radius: 1.75rem;
+      padding: 1.75rem;
+      border: 1px solid var(--stone-200);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    @media (min-width: 640px) {
+      .doctor-card {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .doctor-card:hover {
+      box-shadow: 0 15px 30px rgba(10, 27, 42, 0.08);
+      border-color: #a7f3d0;
+    }
+
+    .doctor-photo-wrap {
+      position: relative;
+      width: 100%;
+      height: 240px;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--stone-200);
+    }
+
+    @media (min-width: 640px) {
+      .doctor-photo-wrap {
+        width: 190px;
+        height: 230px;
+      }
+    }
+
+    .doctor-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .doctor-imc-badge {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background: rgba(10, 27, 42, 0.85);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.35rem;
+    }
+
+    .doctor-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .doctor-name-row {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .doctor-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .doctor-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--emerald);
+    }
+
+    .doctor-quals {
+      font-size: 0.7rem;
+      color: var(--stone-500);
+      margin-bottom: 0.35rem;
+    }
+
+    .doctor-bio {
+      font-size: 0.75rem;
+      color: var(--stone-600);
+      line-height: 1.55;
+    }
+
+    .doctor-meta {
+      border-top: 1px solid var(--stone-200);
+      padding-top: 0.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      color: var(--stone-600);
+    }
+
+    .doctor-action-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+
+    .doctor-avail-text {
+      font-size: 0.7rem;
+      color: var(--stone-400);
+    }
+
+    .doctor-avail-slot {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #065f46;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* Pricing & Insurance Section */
+    .pricing-section {
+      padding: 5.5rem 0;
+      background: var(--bg);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pricing-card {
+      background: white;
+      border-radius: 1.75rem;
+      padding: 2rem;
+      border: 1px solid var(--stone-200);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      background: var(--navy);
+      color: white;
+      border: 2px solid #34d399;
+      box-shadow: 0 20px 40px rgba(10, 27, 42, 0.2);
+    }
+
+    .featured-ribbon {
+      position: absolute;
+      top: -0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #34d399;
+      color: var(--navy);
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 9999px;
+      letter-spacing: 0.05em;
+    }
+
+    .pricing-price {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin: 0.75rem 0 0.25rem;
+    }
+
+    .pricing-tax-note {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--emerald);
+      margin-bottom: 1.25rem;
+    }
+
+    .pricing-card.featured .pricing-tax-note {
+      color: #34d399;
+    }
+
+    .pricing-ul {
+      list-style: none;
+      border-top: 1px solid var(--stone-200);
+      padding-top: 1rem;
+      font-size: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card.featured .pricing-ul {
+      border-color: rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+    }
+
+    .insurance-banner {
+      background: var(--emerald);
+      color: white;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 15px 30px rgba(11, 83, 65, 0.2);
+    }
+
+    @media (min-width: 1024px) {
+      .insurance-banner {
+        flex-direction: row;
+      }
+    }
+
+    /* Patient Reviews Section */
+    .reviews-section {
+      padding: 5.5rem 0;
+      background: white;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .review-card {
+      background: var(--bg);
+      border-radius: 1.5rem;
+      padding: 1.75rem;
+      border: 1px solid var(--stone-200);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .review-comment {
+      font-size: 0.85rem;
+      color: var(--stone-700);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .review-location {
+      font-size: 0.7rem;
+      color: var(--stone-500);
+    }
+
+    /* Dublin Location Section */
+    .location-section {
+      padding: 5.5rem 0;
+      background: var(--bg);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      .location-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    .location-details-card {
+      background: white;
+      border-radius: 1.75rem;
+      padding: 2rem;
+      border: 1px solid var(--stone-200);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .transit-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .transit-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .transit-box {
+      background: var(--stone-50);
+      border: 1px solid var(--stone-200);
+      border-radius: 1rem;
+      padding: 1rem;
+      font-size: 0.75rem;
+    }
+
+    .transit-box-title {
+      font-weight: 700;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .transit-box p {
+      color: var(--stone-600);
+      line-height: 1.4;
+    }
+
+    .hours-table {
+      background: var(--stone-50);
+      border: 1px solid var(--stone-200);
+      border-radius: 1rem;
+      padding: 1.25rem;
+      font-size: 0.75rem;
+    }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+      color: var(--stone-600);
+    }
+
+    .hours-grid strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .districts-card {
+      background: var(--navy);
+      color: white;
+      border-radius: 1.75rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .districts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .district-item {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .district-item strong {
+      display: block;
+      color: white;
+    }
+
+    .district-item span {
+      color: #94a3b8;
+      font-size: 0.7rem;
+    }
+
+    /* FAQ Section Accordion */
+    .faq-section {
+      padding: 5.5rem 0;
+      background: white;
+    }
+
+    .faq-accordion {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      border: 1px solid var(--stone-200);
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: var(--bg);
+      transition: all 0.2s;
+    }
+
+    .faq-item.active {
+      border-color: #a7f3d0;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--stone-600);
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #94a3b8;
+      padding: 4.5rem 0 2rem;
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    .footer-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+    }
+
+    @media (min-width: 640px) {
+      .footer-bottom {
+        flex-direction: row;
+      }
+    }
+
+    /* Sticky Mobile Bottom Booking Bar */
+    .sticky-mobile-bar {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--stone-200);
+      padding: 0.75rem 1.25rem;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
+    }
+
+    @media (min-width: 768px) {
+      .sticky-mobile-bar {
+        display: none;
+      }
+    }
+
+    /* Booking Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(10, 27, 42, 0.7);
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-window {
+      background: white;
+      border-radius: 1.75rem;
+      width: 100%;
+      max-width: 680px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      border: 1px solid var(--stone-200);
+    }
+
+    .modal-header {
+      background: var(--navy);
+      color: white;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-close-btn {
+      background: rgba(255,255,255,0.1);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .modal-steps {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 1.75rem;
+      background: var(--stone-50);
+      border-bottom: 1px solid var(--stone-200);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--stone-400);
+    }
+
+    .modal-steps .step-active {
+      color: var(--emerald);
+      font-weight: 700;
+    }
+
+    .modal-body {
+      padding: 1.75rem;
+    }
+
+    .modal-step-section {
+      display: none;
+    }
+
+    .modal-step-section.active {
+      display: block;
+    }
+
+    .modal-selectable-card {
+      border: 1px solid var(--stone-200);
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+    }
+
+    .modal-selectable-card:hover {
+      border-color: var(--emerald);
+    }
+
+    .modal-selectable-card.selected {
+      border-color: var(--emerald);
+      background: #ecfdf5;
+      box-shadow: 0 0 0 2px rgba(11, 83, 65, 0.15);
+    }
+
+    .time-slot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .time-slot-btn {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--stone-200);
+      background: var(--stone-50);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--stone-700);
+      cursor: pointer;
+    }
+
+    .time-slot-btn.selected {
+      background: var(--emerald);
+      color: white;
+      border-color: var(--emerald);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--stone-700);
+      margin-bottom: 0.35rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--stone-300);
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--emerald);
+      box-shadow: 0 0 0 2px rgba(11, 83, 65, 0.15);
+    }
+
+    .modal-btn-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    .success-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Clinical & Triage Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-left">
+        <span class="pulse"></span>
+        <strong>Dublin Clinic Open Today:</strong>
+        <span>07:30 – 20:00</span>
+        <span style="opacity: 0.4">•</span>
+        <span style="color: #6ee7b7;">Same-Day & Walk-In Appointments Available</span>
+      </div>
+      <div class="top-right">
+        <span>📍 14 Fitzwilliam Place, Dublin 2 (D02 FP84)</span>
+        <span class="emergency-text">Emergency: Dial 112 / 999</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon">
+          <!-- European Cross SVG -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4v16m-8-8h16" />
+            <circle cx="12" cy="12" r="9" stroke-opacity="0.3" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">
+            Aura Health
+            <span class="brand-pill">Dublin</span>
+          </div>
+          <p class="brand-sub">Private Medical Clinic • Fitzwilliam Place</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav">
+        <a href="#services">Medical Services</a>
+        <a href="#facility">The Facility</a>
+        <a href="#doctors">Our Doctors</a>
+        <a href="#pricing">Fees & Insurance</a>
+        <a href="#reviews">Patient Reviews</a>
+        <a href="#location">Clinic & Transit</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <a href="tel:+35314853200" class="phone-btn" title="Call Clinic Reception">
+          <div class="phone-icon-circle">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 0.65rem; color: var(--stone-500); text-transform: uppercase;">Direct Desk</div>
+            <span>+353 (0)1 485 3200</span>
+          </div>
+        </a>
+
+        <button onclick="openBookingModal('general-practice')" class="btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <span>Book Consultation</span>
+        </button>
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+      <a href="#services" onclick="toggleMobileMenu()">Medical Services</a>
+      <a href="#facility" onclick="toggleMobileMenu()">The Facility</a>
+      <a href="#doctors" onclick="toggleMobileMenu()">IMC-Registered Doctors</a>
+      <a href="#pricing" onclick="toggleMobileMenu()">Fees & Insurance</a>
+      <a href="#reviews" onclick="toggleMobileMenu()">Patient Reviews</a>
+      <a href="#location" onclick="toggleMobileMenu()">Location & Transit</a>
+      <a href="#faq" onclick="toggleMobileMenu()">Frequently Asked Questions</a>
+      <div style="padding-top: 1rem; border-top: 1px solid var(--stone-200); display: flex; flex-direction: column; gap: 0.75rem;">
+        <a href="tel:+35314853200" class="btn-secondary" style="justify-content: center;">
+          📞 Call Reception: +353 (0)1 485 3200
+        </a>
+        <button onclick="toggleMobileMenu(); openBookingModal();" class="btn-primary" style="justify-content: center;">
+          📅 Book Consultation Online
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <!-- Left Editorial Column -->
+      <div>
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          <span>Dublin Clinic Open Today</span>
+          <span style="opacity: 0.3">•</span>
+          <span style="color: var(--emerald);">Next In-Clinic Slot: 14:15</span>
+        </div>
+
+        <h1 class="hero-title">
+          Modern Healthcare, Rooted in <span class="serif-italic">Precision</span> &amp; Compassion.
+        </h1>
+
+        <p class="hero-desc">
+          Private GP consultations, executive health screens, and advanced diagnostics at Fitzwilliam Place, Dublin 2. Experience unhurried 20-minute consultations led by Irish Medical Council registered physicians.
+        </p>
+
+        <div class="hero-features">
+          <div class="feature-check">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>20-Min Consultations</span>
+          </div>
+          <div class="feature-check">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>Same-Day e-Prescriptions</span>
+          </div>
+          <div class="feature-check">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span>VHI &amp; Laya Claimable</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button onclick="openBookingModal()" class="btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Book Appointment Online</span>
+          </button>
+          <a href="#services" class="btn-secondary">
+            <span>Explore Services &amp; Fees</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div class="stars">
+              ★★★★★
+            </div>
+            <strong style="color: var(--navy);">4.9 / 5.0</strong>
+            <span>(540+ Google Reviews)</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600;">
+            <svg width="16" height="16" fill="none" stroke="var(--emerald)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Irish Medical Council Reg. #412984</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Imagery Column -->
+      <div class="hero-media">
+        <div class="hero-image-frame">
+          <img src="public/images/hero-clinic.jpg" alt="Doctor consulting with patient in modern European clinic suite at Aura Health Dublin" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80';" />
+          <div class="hero-img-overlay"></div>
+          <div class="hero-floating-card">
+            <div>
+              <span class="floating-badge">Fitzwilliam Place Suite</span>
+              <div class="floating-heading">Unhurried European Standard Care</div>
+            </div>
+            <div style="text-align: right;">
+              <span style="font-size: 0.65rem; color: var(--stone-500); display: block;">GP Visits From</span>
+              <div class="floating-price">€75</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking Floating Bar -->
+  <div class="container quick-bar-wrapper">
+    <div class="quick-bar">
+      <div class="input-field">
+        <label class="input-label">Select Medical Service</label>
+        <select id="quickServiceSelect" class="input-select">
+          <option value="general-practice">General Practice Consultation (€75)</option>
+          <option value="executive-health-screen">Executive Health Screen (€295)</option>
+          <option value="rapid-blood-diagnostics">Rapid Blood Diagnostics (€60)</option>
+          <option value="dermatology-mole-check">Dermatology & Mole Mapping (€120)</option>
+          <option value="womens-health-wellwoman">Well Woman & Menopause (€110)</option>
+          <option value="minor-surgery-joint-injections">Minor Surgery / Injections (€165)</option>
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label class="input-label">Consultant / Physician</label>
+        <select id="quickDoctorSelect" class="input-select">
+          <option value="any">First Available Senior GP</option>
+          <option value="dr-liam-gallagher">Dr. Liam Gallagher (Lead GP)</option>
+          <option value="dr-aoife-oconnor">Dr. Aoife O'Connor (Consultant)</option>
+        </select>
+      </div>
+
+      <div class="input-field">
+        <label class="input-label">Appointment Day</label>
+        <select class="input-select">
+          <option value="today">Today (Monday) - Priority</option>
+          <option value="tomorrow">Tomorrow (Tuesday)</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+        </select>
+      </div>
+
+      <div>
+        <button onclick="triggerQuickBooking()" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.75rem 1.5rem;">
+          Find Slots →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust Accreditation Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-flex">
+        <div class="trust-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>IMC Registered Physicians</span>
+        </div>
+        <div class="trust-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>VHI, Laya &amp; Irish Life Claimable</span>
+        </div>
+        <div class="trust-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <span>20% Med 1 Irish Tax Relief</span>
+        </div>
+        <div class="trust-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Healthmail Direct E-Prescribing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Medical Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Clinical Practice Services</span>
+        <h2 class="section-title">Comprehensive Medical Care in Dublin 2</h2>
+        <p class="section-desc">
+          From acute general practice to preventative executive health screening and specialist diagnostics, our team delivers thoughtful, evidence-led private medical care.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div>
+            <div class="service-top">
+              <span class="service-category">General Practice</span>
+              <span class="service-duration">⏱ 20 Mins</span>
+            </div>
+            <h3 class="service-name">General Practice &amp; Family Medicine</h3>
+            <p class="service-desc">
+              In-depth 20-minute private GP consultations for acute illness, ongoing medical management, digital prescriptions, and hospital referrals.
+            </p>
+            <div class="service-price-box">
+              <span class="service-price">€75</span>
+              <span class="service-per">/ consultation</span>
+            </div>
+            <ul class="benefits-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Same-day or next-day slots guaranteed</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Direct Healthmail e-Prescription to your pharmacy</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Medical sick certs &amp; specialist referral letters</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Claim up to 75% back on Irish Health Insurance</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('general-practice')" class="btn-primary">
+            Book GP Consultation
+          </button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card" style="border-color: #a7f3d0; background: linear-gradient(180deg, #f0fdf4 0%, #fff 15%);">
+          <div>
+            <div class="service-top">
+              <span class="service-category" style="background: #dcfce7; color: #166534;">Most Popular</span>
+              <span class="service-duration">⏱ 90 Mins</span>
+            </div>
+            <h3 class="service-name">Executive Health &amp; Longevity Screen</h3>
+            <p class="service-desc">
+              Comprehensive 90-minute full-body biomarker screening, cardiovascular stress testing, lung spirometry, and custom physician roadmap.
+            </p>
+            <div class="service-price-box">
+              <span class="service-price">€295</span>
+              <span class="service-per">/ full assessment</span>
+            </div>
+            <ul class="benefits-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 52 comprehensive blood &amp; metabolic biomarkers</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Resting 12-lead ECG &amp; cardiovascular scoring</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 16-page personalized physician medical report</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Eligible for 20% Irish Tax Relief (Revenue Med 1)</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('executive-health-screen')" class="btn-primary">
+            Book Executive Screen
+          </button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div>
+            <div class="service-top">
+              <span class="service-category">Diagnostics</span>
+              <span class="service-duration">⏱ 15 Mins</span>
+            </div>
+            <h3 class="service-name">Rapid Blood Diagnostics &amp; Phlebotomy</h3>
+            <p class="service-desc">
+              Full on-site phlebotomy suite with rapid 24-hour turnaround for vitamins, thyroid, lipids, hormones, and full blood count.
+            </p>
+            <div class="service-price-box">
+              <span class="service-price">€60</span>
+              <span class="service-per">/ panel test</span>
+            </div>
+            <ul class="benefits-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Gentle specialist phlebotomist sampling</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Secure encrypted digital results portal</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Full physician commentary on all results</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> No prior GP referral required</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('rapid-blood-diagnostics')" class="btn-primary">
+            Book Blood Test
+          </button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div>
+            <div class="service-top">
+              <span class="service-category">Specialist Care</span>
+              <span class="service-duration">⏱ 30 Mins</span>
+            </div>
+            <h3 class="service-name">Dermatology &amp; Full Mole Mapping</h3>
+            <p class="service-desc">
+              High-magnification digital optical dermoscopy for early skin cancer detection, atypical moles, acne management, and eczema therapy.
+            </p>
+            <div class="service-price-box">
+              <span class="service-price">€120</span>
+              <span class="service-per">/ dermoscopy visit</span>
+            </div>
+            <ul class="benefits-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Digital optical dermoscopy imaging</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Melanoma and basal cell carcinoma screening</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Minor cryotherapy available on-site</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Tailored dermatological treatment roadmap</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('dermatology-mole-check')" class="btn-primary">
+            Book Dermatology Visit
+          </button>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div>
+            <div class="service-top">
+              <span class="service-category">Women's Health</span>
+              <span class="service-duration">⏱ 30 Mins</span>
+            </div>
+            <h3 class="service-name">Well Woman &amp; Menopause Clinic</h3>
+            <p class="service-desc">
+              Specialized female hormonal profiling, cervical screening, fertility counsel, and evidence-based body-identical HRT management.
+            </p>
+            <div class="service-price-box">
+              <span class="service-price">€110</span>
+              <span class="service-per">/ consultation</span>
+            </div>
+            <ul class="benefits-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Led by Consultant Physician Dr. Aoife O'Connor</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Comprehensive hormone panel &amp; bone review</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Registered CervicalCheck sample provider</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Evidence-based body-identical HRT prescriptions</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('womens-health-wellwoman')" class="btn-primary">
+            Book Well Woman Check
+          </button>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div>
+            <div class="service-top">
+              <span class="service-category">Minor Surgery</span>
+              <span class="service-duration">⏱ 45 Mins</span>
+            </div>
+            <h3 class="service-name">Minor Surgery &amp; Joint Injections</h3>
+            <p class="service-desc">
+              Sterile clinic theatre for skin tag and cyst removals, ingrown toenail procedures, and ultrasound-guided joint pain relief injections.
+            </p>
+            <div class="service-price-box">
+              <span class="service-price">€165</span>
+              <span class="service-per">/ procedure</span>
+            </div>
+            <ul class="benefits-list">
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Accredited clinical minor surgery suite</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Histopathology analysis on all excised lesions</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Corticosteroid &amp; hyaluronic acid joint injections</li>
+              <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Fully covered on major health policies</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('minor-surgery-joint-injections')" class="btn-primary">
+            Book Minor Procedure
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facility & European Standards (Dark luxury section) -->
+  <section id="facility" class="facility-section">
+    <div class="container facility-grid">
+      <!-- Architectural Image -->
+      <div>
+        <div class="facility-image-card">
+          <img src="public/images/clinic-interior.jpg" alt="Aura Health Dublin luxury clinic reception and consultation lounge on Fitzwilliam Place" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80';" />
+          <div class="facility-img-caption">
+            <span>Fitzwilliam Place Consulting Suites</span>
+            <p style="color: #cbd5e1;">Modern European clinical aesthetics paired with advanced Irish medical technology.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillars -->
+      <div>
+        <span class="section-pill" style="background: rgba(11, 83, 65, 0.6); color: #34d399; border-color: rgba(52, 211, 153, 0.4);">
+          The European Standard
+        </span>
+        <h2 style="font-size: 2.5rem; font-weight: 800; color: white; margin: 0.75rem 0 1rem; line-height: 1.15;">
+          Healthcare Reimagined for Discerning Patients
+        </h2>
+        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;">
+          Founded on the principle that premium healthcare requires both clinical precision and genuine human connection. Every touchpoint at Aura Health Dublin is engineered for unhurried, reassuring care.
+        </p>
+
+        <div class="facility-pillars">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="pillar-title">20-Minute Minimum Visits</div>
+            <div class="pillar-desc">We reject the 7-minute rushed appointment model. Our physicians conduct thorough examinations and listen carefully to your history.</div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/></svg>
+            </div>
+            <div class="pillar-title">On-Site Diagnostic Suite</div>
+            <div class="pillar-desc">Phlebotomy, resting 12-lead ECG, lung spirometry, and dermoscopic mole mapping performed on-site with rapid turnaround.</div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="pillar-title">Direct Healthmail E-Prescribing</div>
+            <div class="pillar-desc">Prescriptions sent securely to your chosen Irish pharmacy before you leave your consultation room.</div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            </div>
+            <div class="pillar-title">Calm Architectural Sanctuary</div>
+            <div class="pillar-desc">Natural Scandinavian oak, acoustic privacy, and soft natural light create a restful, anxiety-free atmosphere.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctor Directorate Section -->
+  <section id="doctors" class="doctors-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Our Medical Directorate</span>
+        <h2 class="section-title">Consultant Physicians &amp; Specialists</h2>
+        <p class="section-desc">
+          All Aura Health doctors are registered with the Irish Medical Council and bring decades of clinical leadership from Ireland and the UK's foremost teaching hospitals.
+        </p>
+      </div>
+
+      <div class="doctors-grid">
+        <!-- Doctor 1: Dr. Liam Gallagher -->
+        <div class="doctor-card">
+          <div class="doctor-photo-wrap">
+            <img src="public/images/doctor-liam.jpg" alt="Dr. Liam Gallagher, Medical Director at Aura Health Dublin" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80';" />
+            <div class="doctor-imc-badge">IMC #412984</div>
+          </div>
+          <div class="doctor-info">
+            <div>
+              <div class="doctor-name-row">
+                <h3 class="doctor-name">Dr. Liam Gallagher</h3>
+                <span title="Verified Physician" style="color: var(--emerald);">✓</span>
+              </div>
+              <div class="doctor-title">Medical Director &amp; Senior GP</div>
+              <div class="doctor-quals">MB BCh BAO (TCD), MRCPI, MICGP</div>
+              <p class="doctor-bio">
+                Graduated with honors from Trinity College Dublin. With over 18 years of clinical practice in Dublin and London teaching hospitals, Dr. Gallagher specializes in comprehensive executive health screening and proactive longevity care.
+              </p>
+            </div>
+
+            <div class="doctor-meta">
+              <div><strong>Specialty:</strong> Preventive Medicine, Men's Health &amp; Cardio</div>
+              <div><strong>Languages:</strong> English, Irish (Gaeilge), French</div>
+            </div>
+
+            <div class="doctor-action-row">
+              <div>
+                <span class="doctor-avail-text">Next Available:</span>
+                <span class="doctor-avail-slot">⏱ Today, 14:15</span>
+              </div>
+              <button onclick="openBookingModal('general-practice', 'dr-liam-gallagher')" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
+                Book with Dr. Liam
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2: Dr. Aoife O'Connor -->
+        <div class="doctor-card">
+          <div class="doctor-photo-wrap">
+            <img src="public/images/doctor-aoife.jpg" alt="Dr. Aoife O'Connor, Consultant Physician at Aura Health Dublin" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594824813589-7756fcfbd11e?auto=format&fit=crop&w=600&q=80';" />
+            <div class="doctor-imc-badge">IMC #428913</div>
+          </div>
+          <div class="doctor-info">
+            <div>
+              <div class="doctor-name-row">
+                <h3 class="doctor-name">Dr. Aoife O'Connor</h3>
+                <span title="Verified Physician" style="color: var(--emerald);">✓</span>
+              </div>
+              <div class="doctor-title">Consultant Physician &amp; Women's Health Lead</div>
+              <div class="doctor-quals">MB BCh BAO (UCD), MRCOG, Dip Derm</div>
+              <p class="doctor-bio">
+                Trained at University College Dublin and the National Maternity Hospital. Dr. O'Connor brings specialized expertise in menopause management, dermatological mole mapping, and hormonal health with an empathetic, personalized approach.
+              </p>
+            </div>
+
+            <div class="doctor-meta">
+              <div><strong>Specialty:</strong> Women's Health, Dermatology &amp; Diagnostics</div>
+              <div><strong>Languages:</strong> English, German</div>
+            </div>
+
+            <div class="doctor-action-row">
+              <div>
+                <span class="doctor-avail-text">Next Available:</span>
+                <span class="doctor-avail-slot">⏱ Today, 16:00</span>
+              </div>
+              <button onclick="openBookingModal('womens-health-wellwoman', 'dr-aoife-oconnor')" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
+                Book with Dr. Aoife
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transparent Pricing & Insurance Section -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Transparent Irish Healthcare Pricing</span>
+        <h2 class="section-title">Clear Fees &amp; Maximum Insurance Rebates</h2>
+        <p class="section-desc">
+          No unexpected clinic facility charges. We issue official digital receipts recognized for instant insurance claims and Irish Revenue 20% Med 1 tax relief.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Pricing Card 1 -->
+        <div class="pricing-card">
+          <div>
+            <span class="service-category">Standard Practice</span>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-top: 0.75rem;">Private GP Consultation</h3>
+            <p style="font-size: 0.8rem; color: var(--stone-500); margin-top: 0.25rem;">Full clinical evaluation, diagnosis, e-prescription &amp; referral.</p>
+            <div class="pricing-price">€75</div>
+            <div class="pricing-tax-note">Effective cost ~€60 after 20% Med 1 Tax Relief</div>
+            <ul class="pricing-ul">
+              <li>• Full 20-minute in-depth consultation</li>
+              <li>• Same-day appointment availability</li>
+              <li>• Direct Healthmail prescription to Irish pharmacy</li>
+              <li>• VHI, Laya, Irish Life Health claimable</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('general-practice')" class="btn-secondary" style="width: 100%; justify-content: center;">
+            Book GP Consultation
+          </button>
+        </div>
+
+        <!-- Pricing Card 2 (Featured) -->
+        <div class="pricing-card featured">
+          <div class="featured-ribbon">Most Comprehensive Care</div>
+          <div>
+            <span class="service-category" style="background: rgba(52, 211, 153, 0.2); color: #34d399;">Full Diagnostic</span>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: white; margin-top: 0.75rem;">Executive Health Screen</h3>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.25rem;">Full-body cardiovascular, metabolic &amp; biomarker assessment.</p>
+            <div class="pricing-price" style="color: white;">€295</div>
+            <div class="pricing-tax-note">Save €59 via Revenue Med 1 20% Tax Refund</div>
+            <ul class="pricing-ul">
+              <li>• 52 vital blood biomarkers &amp; organ panels</li>
+              <li>• 12-Lead Resting &amp; Exercise ECG</li>
+              <li>• Lung spirometry &amp; cardiovascular risk score</li>
+              <li>• 16-page personalized physician medical report</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('executive-health-screen')" class="btn-primary" style="width: 100%; justify-content: center; background: #34d399; color: var(--navy);">
+            Book Executive Screen
+          </button>
+        </div>
+
+        <!-- Pricing Card 3 -->
+        <div class="pricing-card">
+          <div>
+            <span class="service-category">Specialist Care</span>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy); margin-top: 0.75rem;">Specialist &amp; Diagnostics</h3>
+            <p style="font-size: 0.8rem; color: var(--stone-500); margin-top: 0.25rem;">Dermatology, Well Woman, Rapid Bloods &amp; Minor Surgery.</p>
+            <div class="pricing-price">From €60</div>
+            <div class="pricing-tax-note">Rapid 24-hr accredited Irish lab turnaround</div>
+            <ul class="pricing-ul">
+              <li>• Rapid blood test panels: €60</li>
+              <li>• Full-body mole mapping: €120</li>
+              <li>• Well Woman &amp; Menopause clinic: €110</li>
+              <li>• Minor surgical procedures: €165</li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('rapid-blood-diagnostics')" class="btn-secondary" style="width: 100%; justify-content: center;">
+            Book Specialist Service
+          </button>
+        </div>
+      </div>
+
+      <!-- Insurance banner -->
+      <div class="insurance-banner">
+        <div>
+          <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #a7f3d0; display: block; margin-bottom: 0.4rem;">
+            Irish Revenue Med 1 Tax Relief &amp; Insurance Claimback
+          </span>
+          <h3 style="font-size: 1.35rem; font-weight: 800; color: white; margin-bottom: 0.4rem;">
+            How Irish Patients Save Up to 70% on Fees
+          </h3>
+          <p style="font-size: 0.8rem; color: #d1fae5; line-height: 1.5; max-width: 750px;">
+            In Ireland, private healthcare expenses qualify for <strong>20% standard tax relief</strong> via the Revenue Commissioner Med 1 scheme. Furthermore, policies with <strong>VHI, Laya Healthcare, Irish Life Health</strong> and <strong>Garda Medical Aid</strong> provide direct rebates on outpatient consultations. Our clinic receipts contain all required IMC registration codes for one-click claim submission.
+          </p>
+        </div>
+        <button onclick="openBookingModal()" class="btn-secondary" style="white-space: nowrap; font-size: 0.8rem;">
+          Schedule Consultation Now
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Reviews Section -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Patient Stories</span>
+        <h2 class="section-title">Verified Patient Experiences</h2>
+        <p class="section-desc">
+          Rated 4.9/5.0 across 540+ patient reviews on Google and Doctify.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-comment">
+            "The highest standard of care I've experienced in Dublin. Dr. Aoife took 30 minutes to thoroughly listen to my symptoms and formulate a personalized HRT plan. The clinic itself is calm, beautiful, and completely unhurried."
+          </p>
+          <div>
+            <div class="review-author">Ciara Fitzgerald</div>
+            <div class="review-location">Ballsbridge (Dublin 4) • Well Woman Consultation</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-comment">
+            "Booked an executive health check after putting it off for years. The thoroughness of the cardiovascular tests and blood panels was incredible. I received a clear 16-page report within 48 hours. Worth every euro."
+          </p>
+          <div>
+            <div class="review-author">Declan Murphy</div>
+            <div class="review-location">Grand Canal Dock • Executive Health Screen</div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-comment">
+            "Managed to get a same-day appointment within 2 hours of booking online. Prescription was at my local Boots pharmacy before I even walked out the door. Remarkable service and immaculate clinic."
+          </p>
+          <div>
+            <div class="review-author">Fiona Byrne</div>
+            <div class="review-location">Ranelagh • Same-Day GP Consultation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dublin Location & Transit Section -->
+  <section id="location" class="location-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Central Dublin Clinic Location</span>
+        <h2 class="section-title">Visiting Our Fitzwilliam Place Clinic</h2>
+        <p class="section-desc">
+          Conveniently situated in Dublin 2, minutes from St. Stephen's Green, the Grand Canal, and the Luas Green Line.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-details-card">
+          <div style="display: flex; gap: 1rem; align-items: flex-start;">
+            <div style="width: 44px; height: 44px; border-radius: 12px; background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              📍
+            </div>
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--navy);">Aura Health Dublin</h3>
+              <p style="font-size: 0.85rem; color: var(--stone-600);">14 Fitzwilliam Place, Dublin 2, Co. Dublin</p>
+              <div style="font-size: 0.85rem; font-weight: 700; color: var(--emerald); margin-top: 0.2rem;">Eircode: D02 FP84</div>
+            </div>
+          </div>
+
+          <div class="transit-cards">
+            <div class="transit-box">
+              <div class="transit-box-title">🚆 Luas Green Line</div>
+              <p>Harcourt Stop (4 min walk) or St. Stephen's Green (7 min walk).</p>
+            </div>
+            <div class="transit-box">
+              <div class="transit-box-title">🚌 Dublin Bus</div>
+              <p>Routes 11, 14, 15, 39A, 46A stopping at Leeson Street &amp; Green.</p>
+            </div>
+            <div class="transit-box">
+              <div class="transit-box-title">🚗 Patient Parking</div>
+              <p>Dedicated patient bays on-site &amp; on-street Pay-and-Display parking.</p>
+            </div>
+          </div>
+
+          <div class="hours-table">
+            <div style="font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 0.4rem;">
+              ⏱ Clinic Opening Hours (Dublin Local Time):
+            </div>
+            <div class="hours-grid">
+              <div>
+                <strong>Monday – Friday</strong>
+                <span>07:30 – 20:00</span>
+              </div>
+              <div>
+                <strong>Saturday</strong>
+                <span>08:30 – 17:00</span>
+              </div>
+              <div>
+                <strong>Sunday (Urgent)</strong>
+                <span>10:00 – 16:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+            <a href="https://maps.google.com/?q=14+Fitzwilliam+Place+Dublin+2" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="font-size: 0.8rem;">
+              🗺 Open in Google Maps Directions
+            </a>
+            <a href="tel:+35314853200" class="btn-primary" style="font-size: 0.8rem;">
+              📞 Call Reception: +353 (0)1 485 3200
+            </a>
+          </div>
+        </div>
+
+        <div class="districts-card">
+          <div>
+            <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #34d399; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;">
+              Dublin 2 Medical Quarter
+            </span>
+            <h3 style="font-size: 1.5rem; font-weight: 800; color: white; margin-bottom: 0.5rem;">
+              Minutes From Dublin's Key Districts
+            </h3>
+            <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.5;">
+              Aura Health Dublin provides priority medical care to patients throughout central Dublin, including:
+            </p>
+
+            <div class="districts-grid" style="margin-top: 1rem;">
+              <div class="district-item">
+                <strong>Ballsbridge (D4)</strong>
+                <span>6 min drive</span>
+              </div>
+              <div class="district-item">
+                <strong>Grand Canal Dock</strong>
+                <span>8 min drive / DART</span>
+              </div>
+              <div class="district-item">
+                <strong>Ranelagh</strong>
+                <span>5 min via Luas</span>
+              </div>
+              <div class="district-item">
+                <strong>St. Stephen's Green</strong>
+                <span>7 min walk</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 1rem; border-radius: 1rem; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3);">
+            <div style="color: #fca5a5; font-weight: 700; font-size: 0.75rem; margin-bottom: 0.2rem;">
+              ⚠️ Clinical Emergency Notice
+            </div>
+            <p style="font-size: 0.7rem; color: #cbd5e1; line-height: 1.4;">
+              For sudden, life-threatening symptoms (stroke, acute chest tightness, severe anaphylaxis), please attend St. Vincent's or St. James's Hospital Emergency Department or dial 112/999 directly.
+            </p>
+          </div>
+
+          <button onclick="openBookingModal()" class="btn-primary" style="width: 100%; justify-content: center; background: #34d399; color: var(--navy); font-weight: 800;">
+            Reserve Appointment At Fitzwilliam Place
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Frequently Asked Questions</span>
+        <h2 class="section-title">Common Patient Enquiries</h2>
+        <p class="section-desc">
+          Everything you need to know about booking, insurance rebates, and private doctor appointments in Dublin.
+        </p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How do I book a same-day doctor appointment?</span>
+            <span style="font-size: 1.25rem;">▾</span>
+          </button>
+          <div class="faq-answer">
+            You can book directly via our online booking engine on this page in under 60 seconds, or call our Dublin reception team at +353 (0)1 485 3200. We reserve dedicated same-day priority appointment slots each morning starting at 07:30.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I claim consultation fees back on Irish health insurance?</span>
+            <span style="font-size: 1.25rem;">▾</span>
+          </button>
+          <div class="faq-answer">
+            Yes. All our physicians are fully registered with the Irish Medical Council (IMC). Depending on your level of cover with VHI Healthcare, Laya Healthcare, Irish Life Health, or Garda Medical Aid, you can typically claim between 50% and 75% of your consultation and screening fees back using the official digital receipt we issue instantly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Can I claim Irish tax relief (Med 1 form) on medical expenses?</span>
+            <span style="font-size: 1.25rem;">▾</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Under Irish Revenue guidelines, you are entitled to claim 20% tax relief on non-reimbursed health expenses including doctor visits, diagnostic blood tests, and medical procedures via the Revenue MyAccount Med 1 facility.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Where is the clinic located and what are the transit options?</span>
+            <span style="font-size: 1.25rem;">▾</span>
+          </button>
+          <div class="faq-answer">
+            Aura Health Dublin is situated at 14 Fitzwilliam Place, Dublin 2 (Eircode D02 FP84). We are a 4-minute walk from the Harcourt Luas Green Line stop and 10 minutes from St. Stephen's Green. Reserved patient parking is accessible on-site.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>How long are standard appointments?</span>
+            <span style="font-size: 1.25rem;">▾</span>
+          </button>
+          <div class="faq-answer">
+            Our standard GP consultations are 20 minutes minimum — double the length of typical NHS or HSE visits. Specialist screenings, Well Woman checks, and executive assessments range from 30 to 90 minutes to ensure a comprehensive, unhurried medical evaluation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-title" style="color: white; margin-bottom: 0.5rem;">
+            Aura Health
+            <span class="brand-pill" style="background: rgba(52, 211, 153, 0.2); color: #34d399; border-color: rgba(52, 211, 153, 0.4);">Dublin</span>
+          </div>
+          <p style="font-size: 0.8rem; color: #94a3b8; line-height: 1.6; max-width: 320px; margin-bottom: 1.25rem;">
+            Private medical clinic providing unhurried general practice, executive health screening, and rapid diagnostics in Fitzwilliam Place, Dublin 2.
+          </p>
+          <div style="font-size: 0.75rem; color: #cbd5e1;">
+            📍 14 Fitzwilliam Place, Dublin 2, D02 FP84<br>
+            📞 +353 (0)1 485 3200<br>
+            ✉️ care@aurahealth.ie
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Medical Services</div>
+          <ul class="footer-links">
+            <li><a href="#services">General Practice &amp; Family GP</a></li>
+            <li><a href="#services">Executive Longevity Screen</a></li>
+            <li><a href="#services">Rapid Blood Diagnostics</a></li>
+            <li><a href="#services">Dermatology &amp; Mole Mapping</a></li>
+            <li><a href="#services">Well Woman &amp; Menopause</a></li>
+            <li><a href="#services">Minor Surgical Procedures</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Clinical Standards</div>
+          <ul class="footer-links">
+            <li><a href="#doctors">Irish Medical Council Register</a></li>
+            <li><a href="#pricing">VHI &amp; Laya Insurance Rebates</a></li>
+            <li><a href="#pricing">Revenue Med 1 Tax Relief</a></li>
+            <li><a href="#location">Directions &amp; Luas Transit</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li><a href="#" onclick="openBookingModal(); return false;">Book Appointment Online</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Aura Health Dublin. All Rights Reserved. Registered in Ireland.
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <span>GDPR Compliant</span>
+          <span>•</span>
+          <span>Healthmail Integrated</span>
+          <span>•</span>
+          <span>IMC #412984</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bar -->
+  <div class="sticky-mobile-bar">
+    <div>
+      <div style="font-size: 0.65rem; color: var(--stone-500); text-transform: uppercase;">Fitzwilliam Place</div>
+      <div style="font-size: 0.85rem; font-weight: 700; color: var(--navy);">Private GP €75</div>
+    </div>
+    <div style="display: flex; gap: 0.5rem;">
+      <a href="tel:+35314853200" class="btn-secondary" style="padding: 0.5rem 0.75rem; font-size: 0.75rem;">
+        📞 Call
+      </a>
+      <button onclick="openBookingModal()" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.75rem;">
+        📅 Book Slot
+      </button>
+    </div>
+  </div>
+
+  <!-- Interactive Appointment Booking Modal -->
+  <div id="bookingModal" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-window">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #34d399; letter-spacing: 0.05em; display: block;">
+            Aura Health Dublin
+          </span>
+          <h2 style="font-size: 1.15rem; font-weight: 800; color: white;">Book In-Clinic Consultation</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeBookingModal()" aria-label="Close modal">✕</button>
+      </div>
+
+      <!-- Step Indicator -->
+      <div id="modalStepIndicator" class="modal-steps">
+        <span id="stepTab1" class="step-active">1. Service</span>
+        <span>→</span>
+        <span id="stepTab2">2. Doctor</span>
+        <span>→</span>
+        <span id="stepTab3">3. Date &amp; Time</span>
+        <span>→</span>
+        <span id="stepTab4">4. Patient Details</span>
+      </div>
+
+      <div class="modal-body">
+        <!-- STEP 1: Select Service -->
+        <div id="modalStep1" class="modal-step-section active">
+          <h3 style="font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.25rem;">Select Medical Consultation or Service</h3>
+          <p style="font-size: 0.75rem; color: var(--stone-500); margin-bottom: 1rem;">Choose from our private GP, diagnostic, or specialist care tracks.</p>
+
+          <div class="modal-selectable-card selected" onclick="selectServiceInModal('general-practice', 'General Practice Consultation', '€75', this)">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: var(--navy);">
+              <span>General Practice &amp; Family Medicine</span>
+              <span style="color: var(--emerald);">€75</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--stone-500); margin: 0.25rem 0;">20-minute in-depth consultation, direct prescription &amp; sick certificates.</p>
+            <span style="font-size: 0.7rem; color: #065f46; font-weight: 600;">⏱ 20 Mins • Insurance Claimable</span>
+          </div>
+
+          <div class="modal-selectable-card" onclick="selectServiceInModal('executive-health-screen', 'Executive Health Screen', '€295', this)">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: var(--navy);">
+              <span>Executive Health &amp; Longevity Screen</span>
+              <span style="color: var(--emerald);">€295</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--stone-500); margin: 0.25rem 0;">90-minute 52-biomarker full screen, 12-lead ECG &amp; 16-page medical roadmap.</p>
+            <span style="font-size: 0.7rem; color: #065f46; font-weight: 600;">⏱ 90 Mins • 20% Med 1 Tax Relief</span>
+          </div>
+
+          <div class="modal-selectable-card" onclick="selectServiceInModal('rapid-blood-diagnostics', 'Rapid Blood Diagnostics', '€60', this)">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: var(--navy);">
+              <span>Rapid Blood Diagnostics &amp; Phlebotomy</span>
+              <span style="color: var(--emerald);">€60</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--stone-500); margin: 0.25rem 0;">Gentle specialist sampling with rapid 24-hr accredited laboratory turnaround.</p>
+            <span style="font-size: 0.7rem; color: #065f46; font-weight: 600;">⏱ 15 Mins • Results via Portal</span>
+          </div>
+
+          <div class="modal-selectable-card" onclick="selectServiceInModal('dermatology-mole-check', 'Dermatology & Mole Mapping', '€120', this)">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: var(--navy);">
+              <span>Dermatology &amp; Full Mole Mapping</span>
+              <span style="color: var(--emerald);">€120</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--stone-500); margin: 0.25rem 0;">Digital optical dermoscopy for skin cancer screening &amp; eczema care.</p>
+            <span style="font-size: 0.7rem; color: #065f46; font-weight: 600;">⏱ 30 Mins • Specialist Assessment</span>
+          </div>
+
+          <div class="modal-selectable-card" onclick="selectServiceInModal('womens-health-wellwoman', 'Well Woman & Menopause', '€110', this)">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: var(--navy);">
+              <span>Well Woman &amp; Menopause Clinic</span>
+              <span style="color: var(--emerald);">€110</span>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--stone-500); margin: 0.25rem 0;">Specialized hormonal profiling, cervical screening &amp; body-identical HRT.</p>
+            <span style="font-size: 0.7rem; color: #065f46; font-weight: 600;">⏱ 30 Mins • Led by Dr. Aoife O'Connor</span>
+          </div>
+
+          <div class="modal-btn-row">
+            <div></div>
+            <button onclick="goToModalStep(2)" class="btn-primary">
+              Continue to Doctor Selection →
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Select Doctor -->
+        <div id="modalStep2" class="modal-step-section">
+          <h3 style="font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.25rem;">Choose Preferred Physician</h3>
+          <p style="font-size: 0.75rem; color: var(--stone-500); margin-bottom: 1rem;">All clinicians are registered with the Irish Medical Council (IMC).</p>
+
+          <div class="modal-selectable-card selected" onclick="selectDoctorInModal('any', 'First Available Senior Physician', this)">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: var(--navy); font-size: 0.85rem;">★ First Available Senior Doctor</strong>
+                <p style="font-size: 0.75rem; color: var(--stone-500); margin-top: 0.2rem;">Earliest appointment turnaround (Recommended for urgent visits)</p>
+              </div>
+              <span style="font-size: 0.7rem; font-weight: 700; color: #065f46; background: #ecfdf5; padding: 0.2rem 0.5rem; border-radius: 9999px;">
+                Earliest Slot: 14:15
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-selectable-card" onclick="selectDoctorInModal('dr-liam-gallagher', 'Dr. Liam Gallagher (Lead GP)', this)">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: var(--navy); font-size: 0.85rem;">Dr. Liam Gallagher</strong>
+                <p style="font-size: 0.75rem; color: var(--stone-500); margin-top: 0.2rem;">MB BCh BAO (TCD), MRCPI, MICGP • IMC #412984</p>
+                <span style="font-size: 0.7rem; color: var(--emerald); font-weight: 600;">Lead Physician • Men's Health &amp; Executive Screening</span>
+              </div>
+              <span style="font-size: 0.7rem; font-weight: 700; color: var(--navy);">
+                Today, 14:15
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-selectable-card" onclick="selectDoctorInModal('dr-aoife-oconnor', 'Dr. Aoife O\'Connor (Consultant)', this)">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <strong style="color: var(--navy); font-size: 0.85rem;">Dr. Aoife O'Connor</strong>
+                <p style="font-size: 0.75rem; color: var(--stone-500); margin-top: 0.2rem;">MB BCh BAO (UCD), MRCOG, Dip Derm • IMC #428913</p>
+                <span style="font-size: 0.7rem; color: var(--emerald); font-weight: 600;">Women's Health Lead • Dermatology &amp; Hormonal Care</span>
+              </div>
+              <span style="font-size: 0.7rem; font-weight: 700; color: var(--navy);">
+                Today, 16:00
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-btn-row">
+            <button onclick="goToModalStep(1)" class="btn-secondary" style="font-size: 0.8rem;">
+              ← Back
+            </button>
+            <button onclick="goToModalStep(3)" class="btn-primary">
+              Select Date &amp; Time →
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Select Date & Time -->
+        <div id="modalStep3" class="modal-step-section">
+          <h3 style="font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.25rem;">Select Consultation Slot</h3>
+          <p style="font-size: 0.75rem; color: var(--stone-500); margin-bottom: 1rem;">14 Fitzwilliam Place Clinic, Dublin 2</p>
+
+          <label class="input-label">Select Day</label>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-bottom: 1rem;">
+            <button type="button" class="time-slot-btn selected" onclick="selectDayInModal('Today (Monday)', this)">
+              <strong style="display: block;">Today</strong>
+              <span>Monday</span>
+            </button>
+            <button type="button" class="time-slot-btn" onclick="selectDayInModal('Tomorrow (Tuesday)', this)">
+              <strong style="display: block;">Tomorrow</strong>
+              <span>Tuesday</span>
+            </button>
+            <button type="button" class="time-slot-btn" onclick="selectDayInModal('Wednesday', this)">
+              <strong style="display: block;">Wednesday</strong>
+              <span>Next Day</span>
+            </button>
+          </div>
+
+          <label class="input-label">Available Dublin Clinic Slots:</label>
+          <div class="time-slot-grid">
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('09:00 AM', this)">09:00 AM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('10:30 AM', this)">10:30 AM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('11:15 AM', this)">11:15 AM</button>
+            <button type="button" class="time-slot-btn selected" onclick="selectTimeInModal('02:15 PM', this)">02:15 PM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('03:30 PM', this)">03:30 PM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('04:15 PM', this)">04:15 PM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('05:00 PM', this)">05:00 PM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('06:30 PM', this)">06:30 PM</button>
+            <button type="button" class="time-slot-btn" onclick="selectTimeInModal('07:15 PM', this)">07:15 PM</button>
+          </div>
+
+          <div style="margin-top: 1.25rem; padding: 0.75rem; border-radius: 0.75rem; background: #fffbeb; border: 1px solid #fde68a; font-size: 0.75rem; color: #92400e;">
+            ℹ️ Standard private consultation duration is 20 to 30 minutes. You will receive an immediate SMS confirmation.
+          </div>
+
+          <div class="modal-btn-row">
+            <button onclick="goToModalStep(2)" class="btn-secondary" style="font-size: 0.8rem;">
+              ← Back
+            </button>
+            <button onclick="goToModalStep(4)" class="btn-primary">
+              Enter Patient Details →
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Patient Details -->
+        <div id="modalStep4" class="modal-step-section">
+          <h3 style="font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.25rem;">Patient Information &amp; Insurance</h3>
+          <p style="font-size: 0.75rem; color: var(--stone-500); margin-bottom: 1rem;">Your medical data is encrypted and protected under Irish GDPR legislation.</p>
+
+          <form onsubmit="handleBookingFormSubmit(event)">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div class="form-group">
+                <label>Full Legal Name *</label>
+                <input type="text" id="patientName" required placeholder="e.g. Siobhan O'Reilly" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label>Mobile Telephone *</label>
+                <input type="tel" id="patientPhone" required placeholder="e.g. +353 87 123 4567" class="form-input" />
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" id="patientEmail" required placeholder="name@domain.ie" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label>Irish Health Insurance</label>
+                <select id="patientInsurance" class="form-input">
+                  <option value="Self-Pay">Self-Pay (Med 1 Tax Relievable)</option>
+                  <option value="VHI Healthcare">VHI Healthcare</option>
+                  <option value="Laya Healthcare">Laya Healthcare</option>
+                  <option value="Irish Life Health">Irish Life Health</option>
+                  <option value="Garda Medical Aid">Garda / Other Corporate</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Reason for Visit (Optional / Confidential)</label>
+              <textarea id="patientNotes" rows="2" placeholder="Brief note on symptoms, repeat prescription, or health check..." class="form-input"></textarea>
+            </div>
+
+            <!-- Booking Summary Box -->
+            <div style="padding: 1rem; border-radius: 0.75rem; background: var(--stone-50); border: 1px solid var(--stone-200); font-size: 0.75rem; margin-bottom: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                <span style="color: var(--stone-500);">Service:</span>
+                <strong id="summaryService" style="color: var(--navy);">General Practice Consultation (€75)</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                <span style="color: var(--stone-500);">Doctor:</span>
+                <strong id="summaryDoctor" style="color: var(--navy);">First Available Senior Physician</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span style="color: var(--stone-500);">Slot:</span>
+                <strong id="summarySlot" style="color: var(--navy);">Today (Monday) at 02:15 PM</strong>
+              </div>
+            </div>
+
+            <div class="modal-btn-row">
+              <button type="button" onclick="goToModalStep(3)" class="btn-secondary" style="font-size: 0.8rem;">
+                ← Back
+              </button>
+              <button type="submit" class="btn-primary">
+                ✓ Confirm Appointment Reservation
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP 5: Success Confirmation -->
+        <div id="modalStep5" class="modal-step-section" style="text-align: center; padding: 1.5rem 0;">
+          <div class="success-icon-wrap">
+            <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <span style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #065f46; background: #ecfdf5; padding: 0.25rem 0.6rem; border-radius: 9999px;">
+            Booking Confirmed
+          </span>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--navy); margin: 0.75rem 0 0.5rem;">
+            We Look Forward to Welcoming You
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--stone-600); max-width: 440px; margin: 0 auto 1.5rem; line-height: 1.5;">
+            Your consultation request has been reserved. A confirmation SMS &amp; digital calendar invitation have been dispatched to your mobile.
+          </p>
+
+          <div style="background: var(--stone-50); border: 1px solid var(--stone-200); border-radius: 1rem; padding: 1rem; max-width: 440px; margin: 0 auto 1.5rem; font-size: 0.75rem; text-align: left;">
+            <div style="display: flex; justify-content: space-between; padding-bottom: 0.4rem; border-bottom: 1px solid var(--stone-200);">
+              <span style="color: var(--stone-500);">Booking Reference:</span>
+              <strong id="confirmRef" style="font-family: monospace; font-size: 0.85rem; color: var(--navy);">AUR-8421</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid var(--stone-200);">
+              <span style="color: var(--stone-500);">Service:</span>
+              <strong id="confirmService" style="color: var(--navy);">General Practice Consultation</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid var(--stone-200);">
+              <span style="color: var(--stone-500);">Scheduled Time:</span>
+              <strong id="confirmTime" style="color: var(--navy);">Today at 02:15 PM</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding-top: 0.4rem;">
+              <span style="color: var(--stone-500);">Venue:</span>
+              <strong style="color: var(--navy);">14 Fitzwilliam Place, Dublin 2 (D02 FP84)</strong>
+            </div>
+          </div>
+
+          <button onclick="closeBookingModal()" class="btn-primary" style="padding: 0.7rem 2rem;">
+            Return to Clinic Website
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State management for booking
+    let currentStep = 1;
+    let selectedService = { id: 'general-practice', name: 'General Practice Consultation', price: '€75' };
+    let selectedDoctor = { id: 'any', name: 'First Available Senior Physician' };
+    let selectedDay = 'Today (Monday)';
+    let selectedTime = '02:15 PM';
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('active');
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('active');
+    }
+
+    function openBookingModal(serviceId, doctorId) {
+      if (serviceId) {
+        if (serviceId === 'executive-health-screen') {
+          selectedService = { id: 'executive-health-screen', name: 'Executive Health Screen', price: '€295' };
+        } else if (serviceId === 'rapid-blood-diagnostics') {
+          selectedService = { id: 'rapid-blood-diagnostics', name: 'Rapid Blood Diagnostics', price: '€60' };
+        } else if (serviceId === 'dermatology-mole-check') {
+          selectedService = { id: 'dermatology-mole-check', name: 'Dermatology & Mole Mapping', price: '€120' };
+        } else if (serviceId === 'womens-health-wellwoman') {
+          selectedService = { id: 'womens-health-wellwoman', name: 'Well Woman & Menopause', price: '€110' };
+        } else if (serviceId === 'minor-surgery-joint-injections') {
+          selectedService = { id: 'minor-surgery-joint-injections', name: 'Minor Surgery / Injections', price: '€165' };
+        } else {
+          selectedService = { id: 'general-practice', name: 'General Practice Consultation', price: '€75' };
+        }
+      }
+
+      if (doctorId) {
+        if (doctorId === 'dr-liam-gallagher') {
+          selectedDoctor = { id: 'dr-liam-gallagher', name: 'Dr. Liam Gallagher (Lead GP)' };
+        } else if (doctorId === 'dr-aoife-oconnor') {
+          selectedDoctor = { id: 'dr-aoife-oconnor', name: 'Dr. Aoife O\'Connor (Consultant)' };
+        }
+      }
+
+      updateSummaryLabels();
+      goToModalStep(1);
+      document.getElementById('bookingModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'bookingModal') {
+        closeBookingModal();
+      }
+    }
+
+    function goToModalStep(step) {
+      currentStep = step;
+      // Hide all steps
+      for (let i = 1; i <= 5; i++) {
+        const el = document.getElementById('modalStep' + i);
+        if (el) el.classList.remove('active');
+        const tab = document.getElementById('stepTab' + i);
+        if (tab) tab.classList.remove('step-active');
+      }
+
+      const activeEl = document.getElementById('modalStep' + step);
+      if (activeEl) activeEl.classList.add('active');
+
+      // Update indicator tabs
+      for (let i = 1; i <= Math.min(step, 4); i++) {
+        const tab = document.getElementById('stepTab' + i);
+        if (tab) tab.classList.add('step-active');
+      }
+
+      const indicator = document.getElementById('modalStepIndicator');
+      if (step === 5) {
+        if (indicator) indicator.style.display = 'none';
+      } else {
+        if (indicator) indicator.style.display = 'flex';
+      }
+
+      updateSummaryLabels();
+    }
+
+    function selectServiceInModal(id, name, price, cardEl) {
+      selectedService = { id, name, price };
+      const siblings = cardEl.parentElement.querySelectorAll('.modal-selectable-card');
+      siblings.forEach(el => el.classList.remove('selected'));
+      cardEl.classList.add('selected');
+      updateSummaryLabels();
+    }
+
+    function selectDoctorInModal(id, name, cardEl) {
+      selectedDoctor = { id, name };
+      const siblings = cardEl.parentElement.querySelectorAll('.modal-selectable-card');
+      siblings.forEach(el => el.classList.remove('selected'));
+      cardEl.classList.add('selected');
+      updateSummaryLabels();
+    }
+
+    function selectDayInModal(day, btnEl) {
+      selectedDay = day;
+      const siblings = btnEl.parentElement.querySelectorAll('.time-slot-btn');
+      siblings.forEach(el => el.classList.remove('selected'));
+      btnEl.classList.add('selected');
+      updateSummaryLabels();
+    }
+
+    function selectTimeInModal(time, btnEl) {
+      selectedTime = time;
+      const siblings = btnEl.parentElement.querySelectorAll('.time-slot-btn');
+      siblings.forEach(el => el.classList.remove('selected'));
+      btnEl.classList.add('selected');
+      updateSummaryLabels();
+    }
+
+    function updateSummaryLabels() {
+      const sSvc = document.getElementById('summaryService');
+      const sDoc = document.getElementById('summaryDoctor');
+      const sSlot = document.getElementById('summarySlot');
+      if (sSvc) sSvc.textContent = selectedService.name + ' (' + selectedService.price + ')';
+      if (sDoc) sDoc.textContent = selectedDoctor.name;
+      if (sSlot) sSlot.textContent = selectedDay + ' at ' + selectedTime;
+    }
+
+    function triggerQuickBooking() {
+      const svcVal = document.getElementById('quickServiceSelect').value;
+      const docVal = document.getElementById('quickDoctorSelect').value;
+      openBookingModal(svcVal, docVal);
+      goToModalStep(3); // Jump right to slot picker
+    }
+
+    function handleBookingFormSubmit(e) {
+      e.preventDefault();
+      const randomRef = 'AUR-' + Math.floor(1000 + Math.random() * 9000);
+      
+      const confirmRef = document.getElementById('confirmRef');
+      const confirmSvc = document.getElementById('confirmService');
+      const confirmTime = document.getElementById('confirmTime');
+      
+      if (confirmRef) confirmRef.textContent = randomRef;
+      if (confirmSvc) confirmSvc.textContent = selectedService.name + ' (' + selectedService.price + ')';
+      if (confirmTime) confirmTime.textContent = selectedDay + ' at ' + selectedTime;
+
+      goToModalStep(5);
+    }
+
+    // Keyboard ESC listener
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeBookingModal();
+    });
+  </script>
+</body>
+</html>
